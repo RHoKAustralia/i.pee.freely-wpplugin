@@ -57,10 +57,10 @@
       type: 'POST',
       data: {
         "name": $("#locName").val(),
-        "locationLatLng": [
-          $("#locLat").val(),
-          $("#locLng").val()
-        ],
+        "locationLatLng": {
+          "lat": $("#locLat").val(),
+          "lng": $("#locLng").val()
+        },
         "methodsOfAccess": $("#accessMethod").val(),
         "notes": $("#notes").val(),
         "openingHours": $("#openingHours").val(),
