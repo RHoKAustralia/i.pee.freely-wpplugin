@@ -1,0 +1,177 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+/* Header */
+
+#ipf-header h1 {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 300;
+}
+
+#ipf-header ul {
+  border-bottom: 1px solid #BDBDBD;
+  display: block;
+  margin-bottom: 18px;
+}
+
+#ipf-header ul:before, #ipf-header ul:after {
+  display: table;
+  content: " ";
+}
+
+#ipf-header ul:after {
+  clear: both;
+}
+
+#ipf-header li {
+  display: block;
+  position: relative;
+  float: left;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 300;
+  margin: 0 2px -1px 0;
+}
+
+#ipf-header li a {
+  padding: 12px 14px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#ipf-header li a:hover {
+  background: #e9e9e9;
+}
+
+#ipf-header li.selected a {
+  background: #f1f1f1;
+  border: 1px solid #BDBDBD;
+  color: #888;
+  border-bottom-color: transparent;
+}
+
+/* Homepage Table */
+.ipf-table td, .ipf-table th {
+  padding: 10px 14px;
+}
+
+.ipf-table th {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.ipf-table td {
+  vertical-align: middle !important;
+}
+
+.ipf-table td p {
+  font-size: 14px;
+  margin: 0;
+  color: #888;
+}
+
+.ipf-table td p.name {
+  font-size: 18px;
+  margin: 0 0 2px;
+  color: #32373c;
+}
+
+.ipf-table td a.option {
+  padding: 4px 8px;
+  background: #2196F3;
+  color: white;
+  font-size: 14px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+
+.ipf-table td a.option span.dashicons-before:before {
+  margin-right: 4px;
+}
+
+.ipf-table td a.option:hover {
+  background: #1976D2;
+}
+
+.ipf-table td a.option.delete {
+  background: #F44336;
+}
+
+.ipf-table td a.option.delete:hover {
+  background: #D32F2F;
+}
+
+/* Forms */
+.ipf-form {}
+
+.ipf-form .form-group {
+  margin-bottom: 18px;
+}
+
+.ipf-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.ipf-form input, .ipf-form textarea {
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.ipf-form textarea {
+  height: 100px;
+}
+
+.ipf-form button.button {
+  font-size: 18px;
+  font-weight: 700;
+  height: auto;
+  line-height: 34px;
+}
+
+.ipf-form .form-group.invalid label {
+  color: #dd3d36;
+}
+
+.ipf-form .form-group.invalid input, .ipf-form .form-group.invalid textarea {
+  border-color: #dd3d36;
+}
+
+/* Message Alerts */
+.ipf-message {
+  background: white;
+  border-top: 5px solid #e9e9e9;
+  padding: 20px;
+}
+
+.ipf-message h2 {
+  margin-top: 0;
+}
+
+.ipf-message.red  {
+  border-top-color: #dd3d36;
+}
+
+.ipf-message.red h2 {
+  color: #dd3d36;
+}
+
+.ipf-message.green {
+  border-top-color: #7ad03a;
+}
+
+.ipf-message.green h2 {
+  color: #7ad03a;
+}

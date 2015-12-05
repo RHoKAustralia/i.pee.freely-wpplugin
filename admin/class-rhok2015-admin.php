@@ -61,7 +61,7 @@ class Rhok2015_Admin {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/rhok2015-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -72,8 +72,6 @@ class Rhok2015_Admin {
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/rhok2015-admin.js', array( 'jquery' ), $this->version, false );
-
 	}
 
 	/**
@@ -81,25 +79,64 @@ class Rhok2015_Admin {
 	 *
 	 * @since  1.0.0
 	 */
-	public function add_menu_page() {
+	public function add_menu_pages() {
 
-		$this->plugin_screen_hook_suffix = add_menu_page(
-			__( 'Locations Settings', 'rhok2015' ),
-			__( 'Locations', 'rhok2015' ),
+		add_menu_page(
+			__( 'Locations Settings', 'rhok2015-main' ),
+			__( 'Locations', 'rhok2015-main' ),
 			'manage_options',
-			$this->plugin_name,
-			array( $this, 'display_options_page' )
+			'rhok2015-main',
+			array( $this, 'display_home' )
+		);
+
+		add_submenu_page(
+			'rhok2015-main',
+			'Add Location',
+			'Add Location',
+			'manage_options',
+			'rhok2015-add',
+			array( $this, 'display_add' )
+		);
+
+		add_submenu_page(
+			'rhok2015-main',
+			'Edit Location',
+			'Edit Location',
+			'manage_options',
+			'rhok2015-edit',
+			array( $this, 'display_edit' )
 		);
 
 	}
 
 	/**
-	 * Render the options page for plugin
+	 * Render the index page for plugin
 	 *
 	 * @since  1.0.0
 	 */
-	public function display_options_page() {
-		include_once 'partials/rhok2015-admin-display.php';
+	public function display_home() {
+		wp_enqueue_script( $this->plugin_name + '_home', plugin_dir_url( __FILE__ ) . 'js/index.js', array( 'jquery' ), $this->version, false );
+		include_once 'partials/admin-display.php';
+	}
+
+	/**
+	 * Render the add page for plugin
+	 *
+	 * @since  1.0.0
+	 */
+	public function display_add() {
+		wp_enqueue_script( $this->plugin_name + '_add', plugin_dir_url( __FILE__ ) . 'js/add.js', array( 'jquery' ), $this->version, false );
+		include_once 'partials/admin-add.php';
+	}
+
+	/**
+	 * Render the edit page for plugin
+	 *
+	 * @since  1.0.0
+	 */
+	public function display_edit() {
+		wp_enqueue_script( $this->plugin_name + '_edit', plugin_dir_url( __FILE__ ) . 'js/edit.js', array( 'jquery' ), $this->version, false );
+		include_once 'partials/admin-edit.php';
 	}
 
 }

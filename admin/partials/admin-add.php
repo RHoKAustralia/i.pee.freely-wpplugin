@@ -11,8 +11,21 @@
  * @package    Rhok2015
  * @subpackage Rhok2015/admin/partials
  */
+
+ $page = add;
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 
-<h1>Hello World</h1>
+<div class="wrap" id="index">
+
+  <?php include("header.php") ?>
+
+  <form id="add-location" class="ipf-form">
+    <?php include("form.php"); ?>
+    <div class="form-group submit-button">
+      <button type="submit" class="button button-primary">Add Location</button>
+   </div>
+  </form>
+
+</div>
