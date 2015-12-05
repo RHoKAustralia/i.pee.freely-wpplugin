@@ -7,7 +7,7 @@
       <li class="selected"><a href="#">Edit Location</a></li>
     <?php }?>
     <?php if ($page == "delete") { ?>
-      <li class="selected">><a href="#">Delete Location</a></li>
+      <li class="selected"><a href="#">Delete Location</a></li>
     <?php }?>
   </ul>
 </div>

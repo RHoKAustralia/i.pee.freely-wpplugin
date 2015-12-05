@@ -107,6 +107,15 @@ class Rhok2015_Admin {
 			array( $this, 'display_edit' )
 		);
 
+		add_submenu_page(
+			'rhok2015-main',
+			'Delete Location',
+			'Delete Location',
+			'manage_options',
+			'rhok2015-delete',
+			array( $this, 'display_delete' )
+		);
+
 	}
 
 	/**
@@ -137,6 +146,16 @@ class Rhok2015_Admin {
 	public function display_edit() {
 		wp_enqueue_script( $this->plugin_name + '_edit', plugin_dir_url( __FILE__ ) . 'js/edit.js', array( 'jquery' ), $this->version, false );
 		include_once 'partials/admin-edit.php';
+	}
+
+	/**
+	 * Render the edit page for plugin
+	 *
+	 * @since  1.0.0
+	 */
+	public function display_delete() {
+		wp_enqueue_script( $this->plugin_name + '_edit', plugin_dir_url( __FILE__ ) . 'js/delete.js', array( 'jquery' ), $this->version, false );
+		include_once 'partials/admin-delete.php';
 	}
 
 }

@@ -18,6 +18,7 @@
 			$.ajax({
 		    url: endpoint,
 		    type: 'GET',
+				async: false,
 		    success: function(response){
 					$("#locName").val(response.name);
 					$("#locAddress").val(response.address);

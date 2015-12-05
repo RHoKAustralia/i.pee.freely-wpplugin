@@ -134,7 +134,7 @@
   height: 100px;
 }
 
-.ipf-form button.button {
+.ipf-form .button {
   font-size: 18px;
   font-weight: 700;
   height: auto;
@@ -152,12 +152,17 @@
 /* Message Alerts */
 .ipf-message {
   background: white;
-  border-top: 5px solid #e9e9e9;
+  border-top: 5px solid black;
   padding: 20px;
 }
 
 .ipf-message h2 {
   margin-top: 0;
+  font-size: 24px;
+}
+
+.ipf-message p {
+  font-size: 16px;
 }
 
 .ipf-message.red  {

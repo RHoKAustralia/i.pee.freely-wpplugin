@@ -1,8 +1,7 @@
 (function( $ ) {
 	var endpoint = "http://0.0.0.0:3000/api/locations";
-	var view_item = "/edit?get=";
 	var edit_item = "admin.php?page=rhok2015-edit&id=";
-	var delete_item = "/edit?get=";
+	var delete_item = "admin.php?page=rhok2015-delete&id=";
 
 	$.ajax({
     url: endpoint,
