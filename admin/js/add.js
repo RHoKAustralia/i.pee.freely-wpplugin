@@ -61,6 +61,7 @@
           $("#locLat").val(),
           $("#locLng").val()
         ],
+        "locationType": $("#locationType").val(),
         "methodsOfAccess": $("#accessMethod").val(),
         "notes": $("#notes").val(),
         "openingHours": $("#openingHours").val(),
