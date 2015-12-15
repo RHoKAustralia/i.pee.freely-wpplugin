@@ -25,7 +25,8 @@
 					$("#locLat").val(response.locationLatLng.lat);
 					$("#locLng").val(response.locationLatLng.lng);
 					$("#openingHours").val(response.openingHours);
-					$("#accessMethod").val(response.methodsOfAccess);
+          $("#accessMethod").val(response.methodsOfAccess);
+					$("#locationType").val(response.locationType);
 					$("#otherInfo").val(response.otherInformation);
 					$("#notes").val(response.notes);
 					console.log(response);
@@ -102,6 +103,7 @@
           "lng": $("#locLng").val()
         },
         "methodsOfAccess": $("#accessMethod").val(),
+        "locationType": $("#locationType").val(),
         "notes": $("#notes").val(),
         "openingHours": $("#openingHours").val(),
         "address": $("#locAddress").val(),

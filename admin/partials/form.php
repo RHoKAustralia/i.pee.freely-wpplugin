@@ -23,6 +23,10 @@
   <textarea id="accessMethod"></textarea>
 </div>
 <div class="form-group">
+  <label for="locationType">Location Type</label>
+  <textarea id="locationType"></textarea>
+</div>
+<div class="form-group">
   <label for="otherInfo">Other Information</label>
   <textarea id="otherInfo"></textarea>
 </div>

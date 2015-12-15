@@ -116,6 +116,15 @@ class Rhok2015_Admin {
 			array( $this, 'display_delete' )
 		);
 
+		add_submenu_page(
+			'rhok2015-main',
+			'Export Data',
+			'Export Data',
+			'manage_options',
+			'rhok2015-export',
+			array( $this, 'display_export' )
+		);
+
 	}
 
 	/**
@@ -156,6 +165,15 @@ class Rhok2015_Admin {
 	public function display_delete() {
 		wp_enqueue_script( $this->plugin_name + '_edit', plugin_dir_url( __FILE__ ) . 'js/delete.js', array( 'jquery' ), $this->version, false );
 		include_once 'partials/admin-delete.php';
+	}
+
+		/**
+	 * Render the export page for plugin
+	 *
+	 * @since  1.0.0
+	 */
+	public function display_export() {
+		include_once 'partials/admin-export.php';
 	}
 
 }
